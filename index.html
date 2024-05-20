@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Ano é Bissexto?</title>
+    <style>
+        body {
+            background-color: rgb(130, 179, 252);
+            color: white;
+            font: normal 15pt Arial;
+
+        }
+        input {
+            color: black;
+            font: normal 15pt Arial;
+            width: 100px
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Descubra se tal ano é Bissexto</h1>
+    <p>Qual ano você quer saber se é bissexto?</p>
+    <input type="number" name="ano" id="ano">
+    <br />
+    <input type="button" value="Descobrir" onclick="descobrir()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function descobrir(){
+            var ano = document.getElementById('ano')
+            var anoN = Number(ano.value)
+            var bi = anoN % 4 == 0 ?'<strong>é bissexto<strong>.':'<strong>não é bissexto<strong>.'
+            res.innerHTML = `o ano de ${anoN} ${bi}`
+        }
+    </script>
+    
+</body>
+</html>
